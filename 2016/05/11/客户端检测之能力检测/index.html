@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hello World | Hexo</title>
+  <title>客户端检测之能力检测 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="能力检测能力检测不是检测浏览器类型，而是为了检测浏览器具备何种能力。基本模式如下：123if (object.propertyInQuestion) &amp;#123;	//code&amp;#125;
+早期的IE没有document.getElementById(id)这个DOM方法，可以使用如下代码检测：123456789function getElement(id)&amp;#123;	if(document.g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/04/26/hello-world/index.html">
+<meta property="og:title" content="客户端检测之能力检测">
+<meta property="og:url" content="http://yoursite.com/2016/05/11/客户端检测之能力检测/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-05-11T07:17:55.042Z">
+<meta property="og:description" content="能力检测能力检测不是检测浏览器类型，而是为了检测浏览器具备何种能力。基本模式如下：123if (object.propertyInQuestion) &amp;#123;	//code&amp;#125;
+早期的IE没有document.getElementById(id)这个DOM方法，可以使用如下代码检测：123456789function getElement(id)&amp;#123;	if(document.g">
+<meta property="og:updated_time" content="2016-05-11T11:47:28.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="客户端检测之能力检测">
+<meta name="twitter:description" content="能力检测能力检测不是检测浏览器类型，而是为了检测浏览器具备何种能力。基本模式如下：123if (object.propertyInQuestion) &amp;#123;	//code&amp;#125;
+早期的IE没有document.getElementById(id)这个DOM方法，可以使用如下代码检测：123456789function getElement(id)&amp;#123;	if(document.g">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -200,11 +200,11 @@ Quick">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-客户端检测之能力检测" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/26/hello-world/" class="article-date">
-  	<time datetime="2016-04-26T06:03:13.126Z" itemprop="datePublished">2016-04-26</time>
+      <a href="/2016/05/11/客户端检测之能力检测/" class="article-date">
+  	<time datetime="2016-05-11T11:35:23.000Z" itemprop="datePublished">2016-05-11</time>
 </a>
     </div>
   
@@ -217,7 +217,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      客户端检测之能力检测
     </h1>
   
 
@@ -233,15 +233,13 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="能力检测"><a href="#能力检测" class="headerlink" title="能力检测"></a>能力检测</h2><p>能力检测不是检测浏览器类型，而是为了检测浏览器具备何种能力。基本模式如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (object.propertyInQuestion) &#123;</span><br><span class="line">	<span class="comment">//code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>早期的IE没有document.getElementById(id)这个DOM方法，可以使用如下代码检测：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElement</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">document</span>.getElementById)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">document</span>.all)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">document</span>.all[id];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"No way to retreve element"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="理解能力检测"><a href="#理解能力检测" class="headerlink" title="理解能力检测:"></a>理解能力检测:</h2><p>   1.先检测达成目的最常用的特性；<br>   2.必须测试实际要用到的特性。一个特性存在，不一定意味着另一个特性就存在。</p>
+<h2 id="更可靠的能力检测"><a href="#更可靠的能力检测" class="headerlink" title="更可靠的能力检测"></a>更可靠的能力检测</h2><p>   前面的例子只能证明对象成员存在，但是你不能保证它是你想要用的方法，如:检测某个对象是否支持排序：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isSortable</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> !!obj.sort;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p> 以上代码只检测了属性值是否存在，未检测方法是否是我们所需要的，假设对象本身就包含sort方法,就会出现错误：<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = isSortable(&#123;sort:<span class="literal">false</span>&#125;);</span><br></pre></td></tr></table></figure></p>
+<p> 最好的方法是使用typeof检测是否是一个函数，如果是函数，则支持排序。但是有时候依然会出现错误，如：<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasCreateElement</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> 	<span class="keyword">return</span> <span class="keyword">typeof</span> <span class="built_in">document</span>.CreateElement == <span class="string">"function"</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p> 在IE8及之前的版本，这个函数会返回false，因为 typeof document.CreateElement返回的是object,在浏览器下测试任何对象的某个特性是否存在，使用以下函数：<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isHostMethod</span>(<span class="params">object,property</span>)</span>&#123;</span><br><span class="line"> 	<span class="keyword">var</span> t = <span class="keyword">typeof</span> object[property];</span><br><span class="line"> 	<span class="keyword">return</span> t == <span class="string">'function'</span> || (!!(t==<span class="string">'object'</span>&amp;&amp;object[property])) || t==<span class="string">'unknown'</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -251,15 +249,11 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2016/05/10/textContentt和innerText/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          textContentt和innerText
-        
-      </div>
-    </a>
   
+    <a href="/2016/05/11/模仿块级作用域/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模仿块级作用域</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -292,7 +286,7 @@ Quick">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hello-world" data-title="Hello World" data-url="http://yoursite.com/2016/04/26/hello-world/"></div>
+	<div class="ds-thread" data-thread-key="客户端检测之能力检测" data-title="客户端检测之能力检测" data-url="http://yoursite.com/2016/05/11/客户端检测之能力检测/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
