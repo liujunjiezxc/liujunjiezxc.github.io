@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>table简易操作 | Hexo</title>
+  <title>模仿块级作用域 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS表格里的一些简易操作：
-先看下面的代码：12345678910111213141516171819202122232425262728293031323334353637383940414243441 &amp;lt;head&amp;gt; 2 &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&amp;gt; 3 &amp;lt;">
+  <meta name="description" content="模仿块级作用域JavaScript中没有块级作用域，比方说123456function block() &amp;#123;	for (var i = 0; i &amp;lt;= 10; i++) &amp;#123;			&amp;#125;	alert(i);&amp;#125;
+在C和Java当中这段代码会报错，因为i是在for循环中定义的变量，循环执行完毕后i会被销毁，而在js中，i不会被销毁，而是存在于block的作用域链上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="table简易操作">
-<meta property="og:url" content="http://yoursite.com/2016/05/10/table/index.html">
+<meta property="og:title" content="模仿块级作用域">
+<meta property="og:url" content="http://yoursite.com/2016/05/11/模仿块级作用域/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JS表格里的一些简易操作：
-先看下面的代码：12345678910111213141516171819202122232425262728293031323334353637383940414243441 &amp;lt;head&amp;gt; 2 &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&amp;gt; 3 &amp;lt;">
-<meta property="og:updated_time" content="2016-05-11T07:17:45.782Z">
+<meta property="og:description" content="模仿块级作用域JavaScript中没有块级作用域，比方说123456function block() &amp;#123;	for (var i = 0; i &amp;lt;= 10; i++) &amp;#123;			&amp;#125;	alert(i);&amp;#125;
+在C和Java当中这段代码会报错，因为i是在for循环中定义的变量，循环执行完毕后i会被销毁，而在js中，i不会被销毁，而是存在于block的作用域链上">
+<meta property="og:updated_time" content="2016-05-11T08:56:55.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="table简易操作">
-<meta name="twitter:description" content="JS表格里的一些简易操作：
-先看下面的代码：12345678910111213141516171819202122232425262728293031323334353637383940414243441 &amp;lt;head&amp;gt; 2 &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&amp;gt; 3 &amp;lt;">
+<meta name="twitter:title" content="模仿块级作用域">
+<meta name="twitter:description" content="模仿块级作用域JavaScript中没有块级作用域，比方说123456function block() &amp;#123;	for (var i = 0; i &amp;lt;= 10; i++) &amp;#123;			&amp;#125;	alert(i);&amp;#125;
+在C和Java当中这段代码会报错，因为i是在for循环中定义的变量，循环执行完毕后i会被销毁，而在js中，i不会被销毁，而是存在于block的作用域链上">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -200,11 +200,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-table" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-模仿块级作用域" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/10/table/" class="article-date">
-  	<time datetime="2016-05-10T14:23:56.000Z" itemprop="datePublished">2016-05-10</time>
+      <a href="/2016/05/11/模仿块级作用域/" class="article-date">
+  	<time datetime="2016-05-11T08:54:27.000Z" itemprop="datePublished">2016-05-11</time>
 </a>
     </div>
   
@@ -217,7 +217,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      table简易操作
+      模仿块级作用域
     </h1>
   
 
@@ -233,11 +233,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>JS表格里的一些简易操作：</p>
-<p>先看下面的代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;head&gt;</span><br><span class="line"> 2 &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line"> 3 &lt;title&gt;无标题文档&lt;/title&gt;</span><br><span class="line"> 4 &lt;script&gt;</span><br><span class="line"> 5 window.onload = <span class="keyword">function</span>()</span><br><span class="line"> 6 &#123;</span><br><span class="line"> 7     var oTab = document.getElementById(<span class="string">'tab1'</span>);</span><br><span class="line"> 8     alert(oTab.getElementsByTagName(<span class="string">'tbody'</span>)[0].getElementsByTagName(<span class="string">'tr'</span>)[1].getElementsByTagName(<span class="string">'td'</span>)[1].innerHTML);</span><br><span class="line"> 9 &#125;</span><br><span class="line">10 &lt;/script&gt;</span><br><span class="line">11 &lt;/head&gt;</span><br><span class="line">12 </span><br><span class="line">13 &lt;body&gt;</span><br><span class="line">14 &lt;table id= <span class="string">"tab1"</span> border = <span class="string">"1"</span> width = <span class="string">"500"</span>&gt;</span><br><span class="line">15   &lt;thead&gt;</span><br><span class="line">16   &lt;td&gt;ID&lt;/td&gt;</span><br><span class="line">17     &lt;td&gt;NAME&lt;/td&gt;</span><br><span class="line">18     &lt;td&gt;AGE&lt;/td&gt;</span><br><span class="line">19       &lt;/thead&gt;</span><br><span class="line">20   &lt;tbody&gt;</span><br><span class="line">21     &lt;tr&gt;</span><br><span class="line">22       &lt;td&gt;1&lt;/td&gt;</span><br><span class="line">23       &lt;td&gt;blue&lt;/td&gt;</span><br><span class="line">24       &lt;td&gt;25&lt;/td&gt;</span><br><span class="line">25     &lt;/tr&gt;</span><br><span class="line">26     &lt;tr&gt;</span><br><span class="line">27       &lt;td&gt;2&lt;/td&gt;</span><br><span class="line">28       &lt;td&gt;yellow&lt;/td&gt;</span><br><span class="line">29       &lt;td&gt;23&lt;/td&gt;</span><br><span class="line">30     &lt;/tr&gt;</span><br><span class="line">31     &lt;tr&gt;</span><br><span class="line">32       &lt;td&gt;3&lt;/td&gt;</span><br><span class="line">33       &lt;td&gt;blue&lt;/td&gt;</span><br><span class="line">34       &lt;td&gt;25&lt;/td&gt;</span><br><span class="line">35     &lt;/tr&gt;</span><br><span class="line">36     &lt;tr&gt;</span><br><span class="line">37       &lt;td&gt;4&lt;/td&gt;</span><br><span class="line">38       &lt;td&gt;yellow&lt;/td&gt;</span><br><span class="line">39       &lt;td&gt;23&lt;/td&gt;</span><br><span class="line">40     &lt;/tr&gt;</span><br><span class="line">41   &lt;/tbody&gt;</span><br><span class="line">42 &lt;/table&gt;</span><br><span class="line">43 &lt;/body&gt;</span><br><span class="line">44 &lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>该代码的功能是取出该表格第二行第二列的内容，也就是yellow。但是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(oTab.getElementsByTagName(<span class="string">'tbody'</span>)[0].getElementsByTagName(<span class="string">'tr'</span>)[1].getElementsByTagName(<span class="string">'td'</span>)[1].innerHTML);</span><br></pre></td></tr></table></figure></p>
-<p>此句在表格里取出所需元素，显得很冗长，代码不简洁。这个时候，我们可以用表格里面的相应元素代替其中的getElementsByTagName，要取tbody这个对象，可以使用tBodies，tr可以使用rows，td可以使用cells，此行代码简化如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);</span><br></pre></td></tr></table></figure></p>
-
+        <h3 id="模仿块级作用域"><a href="#模仿块级作用域" class="headerlink" title="模仿块级作用域"></a>模仿块级作用域</h3><p>JavaScript中没有块级作用域，比方说<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">block</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	alert(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在C和Java当中这段代码会报错，因为i是在for循环中定义的变量，循环执行完毕后i会被销毁，而<br>在js中，i不会被销毁，而是存在于block的作用域链上。为了使i在执行完毕后被销毁，我们可以<br>使用匿名函数自执行的方法来模仿块级作用域：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">block</span>(<span class="params">count</span>)</span>&#123;</span><br><span class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">			count = i；</span><br><span class="line">		&#125;</span><br><span class="line">		alert(i);<span class="comment">//报错，i未定义</span></span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><pre><code>1.这种技术常在全局作用域中被用在函数外部，从而限制朝全局作用域中添加过多的变量和函数
+2.匿名函数是一个闭包。
+3.这种做法可以减少闭包占用的内存问题，因为没有指向匿名函数的引用，函数执行完毕，就会立即销毁其作用域链。
+</code></pre>
       
     </div>
     
@@ -246,18 +247,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/11/模仿块级作用域/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          模仿块级作用域
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/10/textContentt和innerText/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">textContentt和innerText</div>
+    <a href="/2016/05/10/table/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">table简易操作</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -292,7 +284,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="table" data-title="table简易操作" data-url="http://yoursite.com/2016/05/10/table/"></div>
+	<div class="ds-thread" data-thread-key="模仿块级作用域" data-title="模仿块级作用域" data-url="http://yoursite.com/2016/05/11/模仿块级作用域/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
